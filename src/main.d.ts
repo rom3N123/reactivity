@@ -8,6 +8,6 @@ interface IObservable<T> {
 }
 
 type Observer<T> = (
-	observer: IObservable<T>,
-	computeCallback: ObservableListener<T>
+	observable: IObservable<T>[],
+	computeCallback: (values: T[]) => T
 ) => any;
